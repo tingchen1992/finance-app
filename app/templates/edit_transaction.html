@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>編輯交易紀錄</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="bg-light">
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">編輯交易紀錄</h1>
+
+        <form method="POST" class="mb-4">
+            {{ form.hidden_tag() }}
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="type" class="form-label">收入/支出:</label>
+                        {{ form.type(class="form-control") }}
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="category" class="form-label">類別:</label>
+                        {{ form.category(class="form-control") }}
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="amount" class="form-label">金額:</label>
+                        {{ form.amount(class="form-control") }}
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+    <div class="form-group">
+        <label for="date" class="form-label">日期:</label>
+        {{ form.date(class="form-control date-picker") }}
+    </div>
+</div>
+
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100 ms-4 mt-4">更新</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="text-center">
+            <a href="{{ url_for('main.index') }}" class="btn btn-secondary">返回首頁</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
