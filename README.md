@@ -18,7 +18,6 @@
 `python3 -m venv venv`  
 
 `source venv/bin/activate`
-# 如果是 Windows 系統，使用 venv\Scripts\activate
 
 ### 步驟 2: 安裝依賴
 在虛擬環境中，安裝專案所需的依賴：  
@@ -26,7 +25,8 @@
 `pip install -r requirements.txt`
 
 ### 步驟 3: 設定資料庫
-此專案使用 SQLAlchemy 作為 ORM 來管理資料庫。執行以下命令來建立資料庫：
+此專案使用 SQLAlchemy 作為 ORM 來管理資料庫。執行以下命令來建立資料庫：  
+
 `flask db init`  
 
 `flask db migrate`  
