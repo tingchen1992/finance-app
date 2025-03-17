@@ -17,9 +17,7 @@
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate  
-
-
+source venv/bin/activate  # 如果是 Windows 系統，使用 venv\Scripts\activate
 步驟 2: 安裝依賴
 在虛擬環境中，安裝專案所需的依賴：
 pip install -r requirements.txt
@@ -36,14 +34,11 @@ flask run
 
 你的應用將會運行在 http://127.0.0.1:5000，可以通過瀏覽器訪問。
 
-
 如何使用
 在首頁，你可以輸入並新增一筆收入或支出。
 交易會顯示在表格中，包含類型、分類、金額和日期。
 你可以選擇編輯或刪除已有的交易紀錄。
 可以按月份來查看分類過的交易紀錄。
-
-
 主要技術
 Flask: Web 框架
 SQLAlchemy: ORM，用於處理資料庫
